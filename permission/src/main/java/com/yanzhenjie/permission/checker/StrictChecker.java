@@ -25,6 +25,8 @@ import java.util.List;
 
 /**
  * Created by Zhenjie Yan on 2018/1/7.
+ *
+ * disable StrickChecker effect,make all check return true
  */
 public final class StrictChecker implements PermissionChecker {
 
@@ -33,25 +35,25 @@ public final class StrictChecker implements PermissionChecker {
 
     @Override
     public boolean hasPermission(Context context, String... permissions) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) return true;
-
-        for (String permission : permissions) {
-            if (!hasPermission(context, permission)) {
-                return false;
-            }
-        }
+//        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) return true;
+//
+//        for (String permission : permissions) {
+//            if (!hasPermission(context, permission)) {
+//                return false;
+//            }
+//        }
         return true;
     }
 
     @Override
     public boolean hasPermission(Context context, List<String> permissions) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) return true;
-
-        for (String permission : permissions) {
-            if (!hasPermission(context, permission)) {
-                return false;
-            }
-        }
+//        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) return true;
+//
+//        for (String permission : permissions) {
+//            if (!hasPermission(context, permission)) {
+//                return false;
+//            }
+//        }
         return true;
     }
 
