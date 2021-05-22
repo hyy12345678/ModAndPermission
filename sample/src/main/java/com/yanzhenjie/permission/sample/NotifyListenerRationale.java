@@ -19,8 +19,8 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 
-import com.yanzhenjie.permission.Rationale;
-import com.yanzhenjie.permission.RequestExecutor;
+import com.neusoft.ncp.j2c.android.permission.Rationale;
+import com.neusoft.ncp.j2c.android.permission.RequestExecutor;
 
 /**
  * Created by Zhenjie Yan on 2018/5/30.

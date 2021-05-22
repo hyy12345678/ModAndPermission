@@ -35,10 +35,10 @@ import android.widget.Toast;
 
 
 
-import com.yanzhenjie.permission.Action;
-import com.yanzhenjie.permission.AndPermission;
-import com.yanzhenjie.permission.runtime.Permission;
-import com.yanzhenjie.permission.runtime.PermissionDef;
+import com.neusoft.ncp.j2c.android.permission.Action;
+import com.neusoft.ncp.j2c.android.permission.AndPermission;
+import com.neusoft.ncp.j2c.android.permission.runtime.Permission;
+import com.neusoft.ncp.j2c.android.permission.runtime.PermissionDef;
 import com.yanzhenjie.permission.sample.App;
 import com.yanzhenjie.permission.sample.InstallRationale;
 import com.yanzhenjie.permission.sample.NotifyListenerRationale;
@@ -49,7 +49,7 @@ import com.yanzhenjie.permission.sample.RuntimeRationale;
 import com.yanzhenjie.permission.sample.WriteSettingRationale;
 import com.yanzhenjie.permission.sample.util.FileUtils;
 import com.yanzhenjie.permission.sample.util.IOUtils;
-import com.yanzhenjie.permission.task.TaskExecutor;
+import com.neusoft.ncp.j2c.android.permission.task.TaskExecutor;
 
 import java.io.BufferedOutputStream;
 import java.io.File;

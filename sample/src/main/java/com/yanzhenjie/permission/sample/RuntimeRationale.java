@@ -20,9 +20,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.text.TextUtils;
 
-import com.yanzhenjie.permission.Rationale;
-import com.yanzhenjie.permission.RequestExecutor;
-import com.yanzhenjie.permission.runtime.Permission;
+import com.neusoft.ncp.j2c.android.permission.Rationale;
+import com.neusoft.ncp.j2c.android.permission.RequestExecutor;
+import com.neusoft.ncp.j2c.android.permission.runtime.Permission;
 
 import java.util.List;
 

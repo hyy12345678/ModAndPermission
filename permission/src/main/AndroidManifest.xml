@@ -16,36 +16,36 @@
     limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yanzhenjie.permission">
+    package="com.neusoft.ncp.j2c.android.permission">
 
     <permission
-        android:name="${applicationId}.andpermission.bridge"
-        android:permissionGroup="${applicationId}.andpermission"
+        android:name="${applicationId}.j2cpermission.bridge"
+        android:permissionGroup="${applicationId}.j2cpermission"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="${applicationId}.andpermission.bridge" />
+    <uses-permission android:name="${applicationId}.j2cpermission.bridge" />
 
     <application>
         <service
-            android:name=".bridge.BridgeService"
+            android:name="com.neusoft.ncp.j2c.android.permission.bridge.BridgeService"
             android:exported="false"
-            android:permission="${applicationId}.andpermission.bridge"
+            android:permission="${applicationId}.j2cpermission.bridge"
             android:process=":permission">
             <intent-filter>
-                <action android:name="${applicationId}.andpermission.bridge" />
+                <action android:name="${applicationId}.j2cpermission.bridge" />
             </intent-filter>
         </service>
 
         <activity
-            android:name=".bridge.BridgeActivity"
+            android:name="com.neusoft.ncp.j2c.android.permission.bridge.BridgeActivity"
             android:configChanges="orientation"
             android:exported="false"
-            android:permission="${applicationId}.andpermission.bridge"
+            android:permission="${applicationId}.j2cpermission.bridge"
             android:process=":permission"
             android:theme="@style/Permission.Theme.Activity.Transparent" />
 
         <provider
-            android:name=".FileProvider"
+            android:name="com.neusoft.ncp.j2c.android.permission.FileProvider"
             android:authorities="${applicationId}.file.path.share"
             android:exported="false"
             android:grantUriPermissions="true">
