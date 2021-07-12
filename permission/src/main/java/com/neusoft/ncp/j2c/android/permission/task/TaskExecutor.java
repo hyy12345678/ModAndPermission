@@ -38,16 +38,26 @@ public abstract class TaskExecutor<T> extends AsyncTask<Void, Void, T> {
 
     @Override
     protected final void onPreExecute() {
-        if (!mDialog.isShowing()) {
-            mDialog.show();
+        try{
+            if (!mDialog.isShowing()) {
+                mDialog.show();
+            }
+        }catch (Exception e){
+            //do noting
         }
+
     }
 
     @Override
     protected final void onPostExecute(T t) {
-        if (mDialog.isShowing()) {
-            mDialog.dismiss();
+        try{
+            if (mDialog.isShowing()) {
+                mDialog.dismiss();
+            }
+        }catch (Exception e){
+            //do noting
         }
+
         onFinish(t);
     }
 
