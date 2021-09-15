@@ -42,15 +42,18 @@ final class RequestExecutor extends Thread implements Messenger.Callback {
 
     @Override
     public void run() {
-        Context context = mRequest.getSource().getContext();
 
-        mMessenger = new Messenger(context, this);
-        mMessenger.register(getName());
+        synchronized (this) {
+            Context context = mRequest.getSource().getContext();
 
-        Intent intent = new Intent();
-        intent.setAction(AndPermission.bridgeAction(context, null));
-        intent.setPackage(context.getPackageName());
-        context.bindService(intent, mConnection, Service.BIND_AUTO_CREATE);
+            mMessenger = new Messenger(context, this);
+            mMessenger.register(getName());
+
+            Intent intent = new Intent();
+            intent.setAction(AndPermission.bridgeAction(context, null));
+            intent.setPackage(context.getPackageName());
+            context.bindService(intent, mConnection, Service.BIND_AUTO_CREATE);
+        }
     }
 
     private ServiceConnection mConnection = new ServiceConnection() {
