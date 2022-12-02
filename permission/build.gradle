@@ -8,8 +8,8 @@ android {
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
 
-        versionCode 4
-        versionName "2.0.3.3"
+        versionCode 5
+        versionName "2.0.3.4"
     }
 
     resourcePrefix 'permission'

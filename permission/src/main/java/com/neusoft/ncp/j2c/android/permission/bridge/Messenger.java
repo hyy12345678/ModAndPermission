@@ -63,7 +63,16 @@ class Messenger extends BroadcastReceiver {
     public void unRegister() {
 
         if(mIsRegistered){
-            mContext.unregisterReceiver(this);
+            try{
+                mContext.unregisterReceiver(this);
+            }catch (IllegalArgumentException e){
+                if (e.getMessage().contains("Receiver not registered")) {
+                    // Ignore this exception. This is exactly what is desired
+                } else {
+                    // unexpected, re-throw
+                    throw e;
+                }
+            }
             mIsRegistered = false;
         }
 
